@@ -1,5 +1,5 @@
 # ddos_syn_flood
-개인공부 용/ python으로 구현한 syn_flood 방식 - 악용 금지
+개인공부 용/ python으로 구현한 syn_flood 방식
 
 ## SYN Flood란?
 
