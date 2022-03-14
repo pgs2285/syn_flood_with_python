@@ -1,6 +1,8 @@
 # ddos_syn_flood
 개인공부 용/ python으로 구현한 syn_flood 방식
 
+연습용_) 굳이 이런 코드 짤필요 없이 Xerosploit사용하면 간단히 SYN 플러딩 가능
+
 ## SYN Flood란?
 
 SYN 플러드는 공격자가 연결을 완료하지 않고 서버에 대한 연결을 빠르게 시작하는 서비스 거부 공격의 한 형태입니다.
