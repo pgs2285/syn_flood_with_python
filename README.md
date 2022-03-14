@@ -27,3 +27,15 @@ SYN Flood는
 여기서 사용한 Scapy는 네트워크 패킷을 보내고, 훔치고, 위조할수 있는 패킷이다.
 
 Scapy를 통해서 지속적으로 목적지에 SYN를 보내는 python code이다.
+
+## 대응책은?
+
+1.Backlog Queue를 일시적으로 증가시킨다. 
+
+만약 리눅스라면 sysctl명령어를 통해 백로그 큐를 증가시키면 일시적인 대응을 할수 있다. 완벽한 방어방법은 아니다.
+
+2.SYN Cookie를 설정한다.
+
+이설정을 하면 사용자 PC에서 다시 ACK를 보낼때까지 Backlog Queue에 연결정보를 저장하지 않는다.
+
+sysctl -w net.ipv4.tcp_syncookies=1
